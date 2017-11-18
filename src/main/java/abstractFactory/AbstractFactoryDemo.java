@@ -93,7 +93,7 @@ abstract class AbstractFactory {
 }
 
 
-public class Main
+public class AbstractFactoryDemo
 {
     public static void main(String[] args){
 
