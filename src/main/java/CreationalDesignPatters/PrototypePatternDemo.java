@@ -1,3 +1,5 @@
+package CreationalDesignPatters;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -40,12 +42,12 @@ class BacteriaFactory{
     static {
 
 
-        bacteriaMap.put("Bacteria",new Bacteria("simon"));
+        bacteriaMap.put("CreationalDesignPatters.Bacteria",new Bacteria("simon"));
     }
 
      public static Optional<IBacteria> getProtoType(String type){
 
-        if("Bacteria".equals(type)){
+        if("CreationalDesignPatters.Bacteria".equals(type)){
 
             return Optional.of(bacteriaMap.get(type)!=null?bacteriaMap.get(type).iBacteriaClone():null);
         }
@@ -61,8 +63,8 @@ public class PrototypePatternDemo {
 
  public static void  main(String args[]){
 
-     System.out.println(BacteriaFactory.getProtoType("Bacteria").isPresent()?BacteriaFactory.getProtoType("Bacteria").get()
-             .iBacteriaClone().getDnaCode():"Bacteria not present of the given type");
+     System.out.println(BacteriaFactory.getProtoType("CreationalDesignPatters.Bacteria").isPresent()?BacteriaFactory.getProtoType("CreationalDesignPatters.Bacteria").get()
+             .iBacteriaClone().getDnaCode():"CreationalDesignPatters.Bacteria not present of the given type");
  }
 
 

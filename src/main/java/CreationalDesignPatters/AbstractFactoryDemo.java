@@ -1,4 +1,4 @@
-package abstractFactory;
+package CreationalDesignPatters;
 
 interface Cpu {
 
